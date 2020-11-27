@@ -23,7 +23,7 @@ function get_multi_colorMap(data_range){
 }
 
 function fill_csv_test(svg, data_var, is_mono_colorMap){
-    d3.csv("test_data.csv",function(data) {
+    d3.csv("data/test_data.csv",function(data) {
 
         var data_min = d3.min(data, function(d) { return +d[data_var]; });
         var data_max = d3.max(data, function(d) { return +d[data_var]; });

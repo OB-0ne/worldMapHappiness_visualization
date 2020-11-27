@@ -1,5 +1,5 @@
 // Add the SVG object to the page
-d3.xml("world-new.svg").mimeType("image/svg+xml").get(function(error, xml) {
+d3.xml("svg/world-new.svg").mimeType("image/svg+xml").get(function(error, xml) {
     if (error) throw error;
     document.getElementById('world-map').appendChild(xml.documentElement);
 });
