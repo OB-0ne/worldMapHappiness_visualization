@@ -1,0 +1,214 @@
+Country-Fixed,id,rank,rank change,score
+Afghanistan,AF,96,84,6.83
+Angola,AO,145,-1,3.94
+Albania,AL,126,4,4.86
+United Arab Emirates,AE,92,37,7.02
+Argentina,AR,17,1,10.53
+Armenia,AM,52,-66,8.81
+Australia,AU,169,71,2.65
+Austria,AT,210,4,0.18
+Azerbaijan,AZ,88,25,7.25
+Burundi,BI,9,-118,11.31
+Belgium,BE,203,99,0.78
+Benin,BJ,85,-59,7.34
+Burkina Faso,BF,38,-170,9.44
+Bangladesh,BD,90,-106,7.12
+Bulgaria,BG,171,68,2.6
+Bosnia and Herzegovina,BA,188,2,1.52
+Belarus,BY,168,92,2.83
+Belize,BZ,213,61,0
+Bolivia,BO,207,198,0.41
+Brazil,BR,73,-52,8.06
+Brunei Darussalam,BN,209,108,0.29
+Bhutan,BT,148,-61,3.8
+Botswana,BW,191,111,1.44
+Central African Republic,CF,7,-173,11.55
+Canada,CA,25,-29,10.05
+Switzerland,CH,91,24,7.03
+Chile,CL,136,-44,4.34
+China,CN,120,-87,5.56
+Ivory Coast,CI,125,80,4.93
+Cameroon,CM,33,-102,9.62
+"Congo, Dem. Rep.",CD,102,-96,6.43
+"Congo, Rep.",CG,116,-77,5.76
+Colombia,CO,69,-60,8.15
+Costa Rica,CR,27,-145,9.89
+Cuba,CU,141,130,4.15
+Czech Republic,CZ,132,44,4.65
+Germany,DE,22,-164,10.25
+Djibouti,DJ,138,82,4.24
+Denmark,DK,55,17,8.66
+Dominican Republic,DO,114,110,5.84
+Algeria,DZ,156,121,3.29
+Ecuador,EC,104,20,6.3
+Egypt,EG,81,6,7.62
+Eritrea,ER,204,16,0.54
+Estonia,EE,30,-145,9.75
+Ethiopia,ET,45,15,9.03
+Finland,FI,83,-82,7.37
+Fiji,FJ,35,-70,9.57
+Gabon,GA,111,98,6.03
+United Kingdom,GB,34,-40,9.6
+Georgia,GE,58,6,8.53
+Ghana,GH,211,26,0.07
+Guinea,GN,161,134,3.13
+Gambia,GM,187,32,1.59
+Guinea-Bissau,GW,123,-60,4.96
+Equatorial Guinea,GQ,95,22,6.92
+Greece,GR,178,41,2.26
+Greenland,GL,87,-92,7.27
+Guatemala,GT,57,-21,8.58
+Guyana,GY,107,-30,6.24
+Honduras,HN,133,17,4.59
+Croatia,HR,26,-175,9.92
+Haiti,HT,170,110,2.62
+Hungary,HU,39,-54,9.36
+Indonesia,ID,208,106,0.35
+India,IN,48,-152,8.87
+Ireland,IE,32,-146,9.73
+"Iran, Islamic Rep.",IR,193,135,1.35
+Iraq,IQ,4,-81,11.71
+Iceland,IS,147,26,3.83
+Israel,IL,101,-11,6.48
+Italy,IT,69,-67,8.15
+Jamaica,JM,19,-22,10.45
+Jordan,JO,18,-3,10.52
+Japan,JP,131,8,4.69
+Kazakhstan,KZ,179,177,2.22
+Kenya,KE,47,-126,9.02
+Kyrgyzstan,KG,165,14,2.98
+Cambodia,KH,63,-51,8.38
+"Korea, Rep.",KR,200,168,0.94
+Kosovo,XK,43,-91,9.28
+Kuwait,KW,36,26,9.53
+Lao People's Democratic Republic,LA,146,59,3.84
+Lebanon,LB,1,-19,11.98
+Liberia,LR,6,-157,11.65
+Libya,LY,53,-141,8.76
+Sri Lanka,LK,79,15,7.69
+Lesotho,LS,161,35,3.13
+Lithuania,LT,144,107,3.97
+Luxembourg,LU,159,11,3.22
+Latvia,LV,142,29,4.07
+Morocco,MA,190,26,1.45
+Moldova,MD,183,-28,1.94
+Madagascar,MG,205,110,0.46
+Mexico,MX,99,-41,6.62
+Macedonia,MK,98,79,6.72
+Mali,ML,89,84,7.18
+Myanmar,MM,71,-85,8.13
+Montenegro,ME,196,47,1.12
+Mongolia,MN,61,27,8.42
+Mozambique,MZ,137,61,4.27
+Mauritania,MR,167,102,2.84
+Malawi,MW,129,85,4.77
+Malaysia,MY,12,-69,10.8
+Namibia,NA,179,178,2.22
+Niger,NE,74,-69,8.04
+Nigeria,NG,5,-140,11.68
+Nicaragua,NI,78,-93,7.72
+Netherlands,NL,112,18,6.01
+Norway,NO,23,-1,10.24
+Nepal,NP,117,-86,5.72
+New Zealand,NZ,3,-46,11.76
+Oman,OM,174,105,2.55
+Pakistan,PK,16,-140,10.57
+Panama,PA,186,91,1.77
+Peru,PE,11,-180,11.03
+Philippines,PH,143,34,4.06
+Papua New Guinea,PG,2,-5,11.86
+Poland,PL,13,-97,10.78
+Dem. Rep. Korea,KP,189,13,1.49
+Portugal,PT,75,-42,8.02
+Paraguay,PY,172,104,2.58
+Palestine,PS,59,-133,8.49
+Qatar,QA,110,63,6.12
+Romania,RO,139,-43,4.22
+Unnamed,RU,212,56,0.01
+Rwanda,RW,130,60,4.72
+Western Sahara,EH,160,6,3.14
+Saudi Arabia,SA,128,89,4.83
+Sudan,SD,157,-26,3.26
+South Sudan,SS,152,6,3.57
+Senegal,SN,79,-41,7.69
+Sierra Leone,SL,62,-67,8.4
+El Salvador,SV,118,18,5.71
+Serbia,RS,197,30,1.08
+Suriname,SR,28,-184,9.84
+Slovakia,SK,42,27,9.31
+Slovenia,SI,166,0,2.91
+Sweden,SE,106,93,6.26
+Eswatini,SZ,24,-64,10.15
+Syrian Arab Republic,SY,122,-31,4.99
+Chad,TD,206,156,0.42
+Togo,TG,54,-123,8.74
+Thailand,TH,14,-146,10.72
+Tajikistan,TJ,64,-104,8.36
+Turkmenistan,TM,49,-43,8.84
+Timor-Leste,TL,148,69,3.8
+Tunisia,TN,119,-55,5.6
+Turkey,TR,67,-95,8.23
+Taiwan,TW,175,89,2.4
+Tanzania,TZ,121,60,5.45
+Uganda,UG,134,-79,4.41
+Ukraine,UA,154,101,3.32
+Uruguay,UY,86,60,7.32
+United States,US,201,177,0.93
+Uzbekistan,UZ,37,-161,9.5
+Venezuela,VE,75,-122,8.02
+Vietnam,VN,10,-87,11.22
+Vanuatu,VU,84,53,7.36
+Yemen,YE,31,-26,9.74
+South Africa,ZA,51,-73,8.83
+Zambia,ZM,124,17,4.94
+Zimbabwe,ZW,15,-100,10.63
+Somalia,SO,185,123,1.8
+France,GF,192,109,1.42
+France,FR,151,122,3.6
+Spain,ES,173,151,2.56
+Aruba,AW,40,17,9.34
+Anguilla,AI,115,72,5.81
+Andorra,AD,60,-46,8.45
+Antigua and Barbuda,AG,41,-50,9.32
+Bahamas,BS,97,-34,6.77
+Bermuda,BM,150,-53,3.61
+Barbados,BB,44,36,9.04
+Comoros,KM,8,-162,11.33
+Cabo Verde,CV,194,55,1.22
+Cayman Islands,KY,77,6,7.81
+Dominica,DM,100,-50,6.55
+Falkland Islands,FK,177,150,2.27
+Faeroe Islands,FO,65,59,8.25
+Grenada,GD,68,-134,8.19
+"Hong Kong SAR, China",HK,45,-1,9.03
+St. Kitts and Nevis,KN,202,74,0.79
+St. Lucia,LC,56,14,8.59
+Liechtenstein,LI,182,83,2.09
+Saint Martin (French),MF,158,155,3.25
+Maldives,MV,66,-124,8.24
+Malta,MT,49,-161,8.84
+Montserrat,MS,113,73,5.96
+Mauritius,MU,163,21,3.06
+New Caledonia,NC,181,-24,2.15
+Nauru,NR,103,-56,6.41
+Pitcairn Islands,PN,72,-9,8.11
+Puerto Rico,PR,135,-60,4.35
+French Polynesia,PF,20,-141,10.29
+Singapore,SG,108,36,6.2
+Solomon Islands,SB,152,134,3.57
+São Tomé and Principe,ST,105,-26,6.27
+Saint Martin (Dutch),SX,109,-10,6.13
+Seychelles,SC,184,96,1.88
+Turks and Caicos Islands,TC,140,74,4.16
+Tonga,TO,93,-76,7.01
+Trinidad and Tobago,TT,164,23,3
+St. Vincent and the Grenadines,VC,155,139,3.3
+British Virgin Islands,VG,82,-29,7.38
+United States Virgin Islands,VI,198,165,1.03
+Cyprus,CY,127,19,4.84
+Reunion (France),RE,176,140,2.28
+Mayotte (France),YT,195,147,1.21
+Martinique (France),MQ,21,-38,10.28
+Guadeloupe (France),GP,29,-160,9.81
+Curaco (Netherlands),CW,199,66,1
+Canary Islands (Spain),IC,94,43,7
