@@ -1,0 +1,33 @@
+body{
+    background-color: black;
+    font-size: 18;
+}
+
+#header{
+    background-color: white;
+    width: 1500px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+#header #title{
+    font-size: 52;
+    margin: auto;
+    width: max-content;
+}
+
+#dashboard{
+    width: 1500px;
+    margin: auto;
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 350px;
+}
+
+#world-map{
+}
+
+#dash_controls{
+    margin: auto;
+    width: max-content;
+}

@@ -21,14 +21,15 @@ function init_svg(){
 
     if(document.getElementById('world-map-svg')){
         
-        var colors = ['red','blue','yellow','green','orange'];
-        
+        // add a default grey color to all countries to begin with
         d3.select('#world-map-svg')
             .selectAll('path')
-            .style("fill", colors[Math.floor(Math.random()*5)]);
+            .style('fill', 'grey');
 
-        // get_IDs();
+        // generate the dropdwon with custom rank names
+        makeDDM();
 
+        // remove the next 3 lines once implemented
         var svg = d3.select('#world-map-svg')
         // fill_csv_test(svg, 'rank', 1);
         fill_csv_test(svg, 'rank change', 0);
@@ -38,5 +39,52 @@ function init_svg(){
     }
     
 }
+
+function makeDDM(){
+
+    var svg = d3.select('#world-map-svg')
+    var control_name = 'data/ddm_control.csv'
+
+    d3.csv(control_name, function(data){
+
+        // set the default rank function
+        global_rank_function = data[0].col_name
+
+        // select all options in the first dropdown and reset them
+        var options = d3.select('#rank-attribute')
+            .selectAll('option')
+            .data(data)
+            .enter()
+            .append('option');    
+
+        // using the data, add the column names and their corresponding titles
+        options.text(function(d) {return d.fe_title;})  //makes the dropdown with this value as options
+            .attr("col_name", function(d) {return d.col_name;}) //makes the col_name which needs to be called to fill
+    
+        // add an event when the option is selected
+        options.on("click", function() {
+            // update the selected rank function in global
+            global_rank_function = this.getAttribute('col_name')
+            // call the filling function for current selected attributes anf their color scheme
+            fill_csv_test(svg, global_rank_function + '_' + global_rank_type, global_is_mono);
+          })
+
+        options = d3.select('#rank-type')
+            .selectAll('option')
+            .on("click", function() {
+                // update the selected rank function detail type in global
+                global_rank_type = this.getAttribute('col_name')
+                // call the filling function for current selected attributes anf their color scheme
+                fill_csv_test(svg, global_rank_function + '_' + global_rank_type, global_is_mono);
+            })
+    
+    });
+
+}
+
 init_svg();
 
+// setting global variables
+global_rank_function = ''
+global_rank_type = 'rank'
+global_is_mono = 1
