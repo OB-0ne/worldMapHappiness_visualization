@@ -15,16 +15,21 @@ function get_IDs(){
         })
 }
 
+function reset_svg_fill(){
+    // add a default grey color to all countries to begin with
+    d3.select('#world-map-svg')
+        .selectAll('path')
+        .style('fill', 'grey');
+}
+
 // Initialize with default settings
 // Checks if the svg is loaded or tries again
 function init_svg(){
 
     if(document.getElementById('world-map-svg')){
         
-        // add a default grey color to all countries to begin with
-        d3.select('#world-map-svg')
-            .selectAll('path')
-            .style('fill', 'grey');
+        // set svg fill to default
+        reset_svg_fill();
 
         // generate the dropdwon with custom rank names
         makeDDM();
@@ -39,6 +44,7 @@ function init_svg(){
     }
     
 }
+
 
 function makeDDM(){
 
@@ -66,6 +72,7 @@ function makeDDM(){
             // update the selected rank function in global
             global_rank_function = this.getAttribute('col_name')
             // call the filling function for current selected attributes anf their color scheme
+            reset_svg_fill();
             fill_csv_test(svg, global_rank_function + '_' + global_rank_type, global_is_mono);
           })
 
@@ -75,6 +82,7 @@ function makeDDM(){
                 // update the selected rank function detail type in global
                 global_rank_type = this.getAttribute('col_name')
                 // call the filling function for current selected attributes anf their color scheme
+                reset_svg_fill();
                 fill_csv_test(svg, global_rank_function + '_' + global_rank_type, global_is_mono);
             })
     
