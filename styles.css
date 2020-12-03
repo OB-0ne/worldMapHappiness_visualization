@@ -24,6 +24,11 @@ body{
     border-radius: 350px;
 }
 
+#dashboard #legend{
+    margin: auto;
+    width: max-content;
+}
+
 #world-map{
 }
 

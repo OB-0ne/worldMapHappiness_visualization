@@ -36,8 +36,9 @@ function init_svg(){
 
         // remove the next 3 lines once implemented
         var svg = d3.select('#world-map-svg')
-        // fill_csv_test(svg, 'rank', 1);
-        fill_csv_test(svg, 'rank change', 0);
+        // fill_csv(svg, 'rank', 1);
+        fill_csv(svg, 'rank change', 0);
+
     }
     else{
         setTimeout(init_svg, 100); 
@@ -73,7 +74,7 @@ function makeDDM(){
             global_rank_function = this.getAttribute('col_name')
             // call the filling function for current selected attributes anf their color scheme
             reset_svg_fill();
-            fill_csv_test(svg, global_rank_function + '_' + global_rank_type, global_is_mono);
+            fill_csv(svg, global_rank_function + '_' + global_rank_type, global_is_mono);
           })
 
         options = d3.select('#rank-type')
@@ -83,7 +84,7 @@ function makeDDM(){
                 global_rank_type = this.getAttribute('col_name')
                 // call the filling function for current selected attributes anf their color scheme
                 reset_svg_fill();
-                fill_csv_test(svg, global_rank_function + '_' + global_rank_type, global_is_mono);
+                fill_csv(svg, global_rank_function + '_' + global_rank_type, global_is_mono);
             })
     
     });
