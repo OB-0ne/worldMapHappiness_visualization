@@ -123,7 +123,8 @@ function fill_csv(svg, data_var, is_mono_colorMap){
         // fill each country with the color respective to its value in the colormap
         data.forEach(function(d) {
             svg.select('#'+d['id'])
-                .style("fill", custom_colorMap(d[data_var]));
+                .style("fill", custom_colorMap(d[data_var]))
+                .attr('curr_val', d[data_var]);
         });
     });
 }

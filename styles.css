@@ -1,13 +1,14 @@
 body{
     background-color: black;
     font-size: 18;
+    font-family: Monaco, sans-serif
 }
 
 #header{
-    background-color: white;
+    color: white;
     width: 1500px;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 10px auto;
+    padding: 10px;
 }
 
 #header #title{
@@ -29,10 +30,22 @@ body{
     width: max-content;
 }
 
-#world-map{
-}
-
 #dash_controls{
     margin: auto;
     width: max-content;
+}
+
+#tooltip {
+    display: none;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 10;
+    padding: 8px 20px;
+    margin: auto;
+    width: max-content;
+    border: grey solid 3px;
+    font-size: 16;
 }

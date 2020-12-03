@@ -34,6 +34,9 @@ function init_svg(){
         // generate the dropdwon with custom rank names
         makeDDM();
 
+        // add tooltip event on all countries
+        add_tooltip_event();
+
         // remove the next 3 lines once implemented
         var svg = d3.select('#world-map-svg')
         // fill_csv(svg, 'rank', 1);
