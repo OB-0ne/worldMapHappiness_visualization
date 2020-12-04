@@ -11,6 +11,7 @@
         <div id='header'>
             <div id='title'>
                 World Happiness Rankings
+                <img id='info-icon' src='svg/info-icon.png' alt="Information Icon" >
             </div>            
         </div>
         <div id='dashboard'>
@@ -19,6 +20,8 @@
                 <select id="rank-attribute">
                 </select>
 
+                <span width='10px'></span>
+
                 <label for="rank-type">Type:</label>
                 <select id="rank-type">
                     <option col_name='rank' color_scheme=1>Rank</option>
@@ -26,6 +29,7 @@
                     <option col_name='rc' color_scheme=0>Rank Change</option>
                     <option col_name='arc' color_scheme=1>Absolute Rank Change</option>
                 </select> 
+
             </div>
             <div id='world-map'>
                 <script src='js/fill_svg.js'></script>
@@ -34,12 +38,25 @@
             </div>
             <div id='legend'>
             </div>
-            <div id='tooltip'>
+            <div id='tooltip' class='tooltip'>
                 <img id='tt_flag'>
                 <br>
                 <span id='tt_country'></span>
                 <br>
                 <span id='tt_value'></span>
+            </div>
+            <div id='tooltip-info' class='tooltip' >
+                Instructions:
+                <ul>
+                    <li>The first dropdown helps to select one of the various custom scoring functions.</li>
+                    <li>The second dropdown helps to select specific deatils about the scoring function.</li>
+                    <li>Hover over the countries below to get detailed information.</li>
+                </ul> 
+            </div>
+        </div>
+        <div id='footer'>
+            <div id='project_info'>
+                CSE-519 <span>||<span> Final Project <span>||<span> World Happiness Rankings <span>||<span>  by <a href="https://github.com/OB-0ne" target="_blank"> Omkar Bhatt</a>, Atharva Kadam and Irissa Cisternino
             </div>
         </div>
     </body>

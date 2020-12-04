@@ -20,7 +20,26 @@ function hide_tooltip(){
     d3.select('#tooltip').style('display', 'none').transition().duration(750);
 }
 
-function add_tooltip_event(){
+function hover_tooltip_info(){
+
+    var svg = d3.select(this);
+    var tooltip = d3.select('#tooltip-info');
+
+    tooltip
+        .style('left', (d3.event.pageX + 14) + "px")
+        .style('top', (d3.event.pageY - 10) + "px");
+    tooltip.innerHTML = svg.attr('id');
+}
+
+function show_tooltip_info(){
+    d3.select('#tooltip-info').style('display', 'block').transition().duration(750);
+}
+
+function hide_tooltip_info(){
+    d3.select('#tooltip-info').style('display', 'none').transition().duration(750);
+}
+
+function add_tooltip_event_countries(){
 
     // select all the country svgs
     var all_svgs = d3.select("#world-map-svg").selectAll('path');
@@ -29,5 +48,17 @@ function add_tooltip_event(){
     all_svgs.on('mousemove', hover_tooltip);
     all_svgs.on('mouseover', show_tooltip);
     all_svgs.on('mouseout', hide_tooltip);
+    
+}
+
+function add_tooltip_event_info(){
+
+    // select all the country svgs
+    var icon = d3.select("#info-icon");
+    
+    // a move hover and remove effect
+    icon.on('mousemove', hover_tooltip_info);
+    icon.on('mouseover', show_tooltip_info);
+    icon.on('mouseout', hide_tooltip_info);
     
 }
