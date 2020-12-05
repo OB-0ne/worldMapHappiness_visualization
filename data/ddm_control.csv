@@ -1,5 +1,5 @@
 fe_title,col_name,show_ddm2
-WHR Scores,Ladder score,FALSE
+WHR,Ladder score,FALSE
 Baseline Function,baseline,TRUE
 Baseline Correlated,baseline_correlated,TRUE
 Baseline Weighted,baseline_weighted,TRUE

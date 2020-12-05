@@ -91,9 +91,9 @@ function get_mono_colorMap(data_range){
 function get_multi_colorMap(data_range){
 
     // set the 3 colors for transition colors
-    low_color = 'red'
+    low_color = 'green'
     mid_color = 'white'
-    high_color = 'green'
+    high_color = 'red'
 
     // set the custom color mapping between values and colors
     var custom_colorMap = d3.scaleLinear().domain(data_range)
