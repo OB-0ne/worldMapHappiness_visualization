@@ -31,7 +31,7 @@ function make_legend(colormap, data_range, is_mono_colorMap){
         .attr("stop-opacity", 1);
 
     // create the mid point for the legend if needed
-    if (!is_mono_colorMap){
+    if (is_mono_colorMap==0){
         legend.append("stop")
             .attr("offset", "50%")
             .attr("stop-color", colormap(0))
@@ -103,14 +103,14 @@ function get_multi_colorMap(data_range){
 }
 
 function fill_csv(svg, data_var, is_mono_colorMap){
-    d3.csv("data/test_data.csv",function(data) {
+    d3.csv("data/final_scores_all_countries.csv",function(data) {
 
         // get the min and max from the current data column to for making a color map
         var data_min = d3.min(data, function(d) { return +d[data_var]; });
         var data_max = d3.max(data, function(d) { return +d[data_var]; });
 
         // make custom color map depending on the variable type
-        if(is_mono_colorMap){
+        if(is_mono_colorMap==1){
             var custom_colorMap = get_mono_colorMap([data_min,data_max])
         }
         else{
@@ -122,7 +122,7 @@ function fill_csv(svg, data_var, is_mono_colorMap){
 
         // fill each country with the color respective to its value in the colormap
         data.forEach(function(d) {
-            svg.select('#'+d['id'])
+            svg.select('#'+d['svg-id'])
                 .style("fill", custom_colorMap(d[data_var]))
                 .attr('curr_val', d[data_var]);
         });

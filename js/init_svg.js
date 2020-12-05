@@ -39,9 +39,10 @@ function init_svg(){
         add_tooltip_event_info();
 
         // remove the next 3 lines once implemented
+        document.getElementById('rank-attribute').selectedIndex = 0;
+        document.getElementById('rank-type').selectedIndex = 0;
         var svg = d3.select('#world-map-svg')
-        // fill_csv(svg, 'rank', 1);
-        fill_csv(svg, 'rank change', 0);
+        fill_csv(svg, global_rank_function + '_' + global_rank_type, 1);
 
     }
     else{
@@ -76,6 +77,12 @@ function makeDDM(){
         options.on("click", function() {
             // update the selected rank function in global
             global_rank_function = this.getAttribute('col_name')
+
+            // reset the second ddm
+            global_rank_type = 'rank'
+            global_is_mono = 1
+            document.getElementById('rank-type').selectedIndex = 0;
+
             // call the filling function for current selected attributes anf their color scheme
             reset_svg_fill();
             fill_csv(svg, global_rank_function + '_' + global_rank_type, global_is_mono);
@@ -86,6 +93,8 @@ function makeDDM(){
             .on("click", function() {
                 // update the selected rank function detail type in global
                 global_rank_type = this.getAttribute('col_name')
+                global_is_mono = this.getAttribute('color_scheme')
+
                 // call the filling function for current selected attributes anf their color scheme
                 reset_svg_fill();
                 fill_csv(svg, global_rank_function + '_' + global_rank_type, global_is_mono);
@@ -98,6 +107,6 @@ function makeDDM(){
 init_svg();
 
 // setting global variables
-global_rank_function = ''
+global_rank_function = 'Ladder score'
 global_rank_type = 'rank'
 global_is_mono = 1

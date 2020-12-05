@@ -12,8 +12,8 @@ function hover_tooltip(){
 function show_tooltip(){
     d3.select('#tooltip').style('display', 'block').transition().duration(750);
     d3.select('#tt_country').text(d3.select(this).attr('data-name'));
-    d3.select('#tt_value').text(global_rank_type + ": " + d3.select(this).attr('curr_val'));
-    d3.select('#tt_flag').attr('src','https://www.countryflags.io/' + d3.select(this).attr('id') + '/flat/32.png')
+    d3.select('#tt_value').text(global_rank_type + ": " + (d3.select(this).attr('curr_val')==null ? 'Not Available' : d3.select(this).attr('curr_val') ));
+    d3.select('#tt_flag').attr('src','https://www.countryflags.io/' + d3.select(this).attr('id') + '/flat/32.png');
 }
 
 function hide_tooltip(){

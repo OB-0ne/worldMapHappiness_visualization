@@ -1,6 +1,9 @@
-fe_title,col_name
-dummy rank 1,dum_dum_1
-dummy rank 2,dum_dum_2
-dummy rank 3,dum_dum_3
-dummy rank 4,dum_dum_4
-dummy rank 5,dum_dum_5
+fe_title,col_name,show_ddm2
+WHR Scores,Ladder score,FALSE
+Baseline Function,baseline,TRUE
+Baseline Correlated,baseline_correlated,TRUE
+Baseline Weighted,baseline_weighted,TRUE
+Custom Grouped,gCustom_weighted,TRUE
+WHO Grouped,gWHO_weighted,TRUE
+World Bank Grouped,gWB_weighted,TRUE
+Angus Maddison grouped,gMadd_weighted,TRUE
