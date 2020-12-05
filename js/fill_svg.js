@@ -102,12 +102,19 @@ function get_multi_colorMap(data_range){
     return custom_colorMap
 }
 
-function fill_csv(svg, data_var, is_mono_colorMap){
+function fill_csv(svg, data_var, is_mono_colorMap, isAscending){
     d3.csv("data/final_scores_all_countries.csv",function(data) {
 
+        // sort the data as needed
         // get the min and max from the current data column to for making a color map
-        var data_min = d3.min(data, function(d) { return +d[data_var]; });
-        var data_max = d3.max(data, function(d) { return +d[data_var]; });
+        if(isAscending==1){
+            var data_min = d3.min(data, function(d) { return +d[data_var]; });
+            var data_max = d3.max(data, function(d) { return +d[data_var]; });
+        }
+        else{
+            var data_min = d3.max(data, function(d) { return +d[data_var]; });
+            var data_max = d3.min(data, function(d) { return +d[data_var]; });
+        }
 
         // make custom color map depending on the variable type
         if(is_mono_colorMap==1){
@@ -123,6 +130,7 @@ function fill_csv(svg, data_var, is_mono_colorMap){
         // fill each country with the color respective to its value in the colormap
         data.forEach(function(d) {
             svg.select('#'+d['svg-id'])
+                .transition()
                 .style("fill", custom_colorMap(d[data_var]))
                 .attr('curr_val', d[data_var]);
         });

@@ -37,12 +37,13 @@ function init_svg(){
         // add tooltip event on all countries and info button
         add_tooltip_event_countries();
         add_tooltip_event_info();
+        hideDDM2_extraOptions();
 
         // remove the next 3 lines once implemented
         document.getElementById('rank-attribute').selectedIndex = 0;
         document.getElementById('rank-type').selectedIndex = 0;
         var svg = d3.select('#world-map-svg')
-        fill_csv(svg, global_rank_function + '_' + global_rank_type, 1);
+        fill_csv(svg, global_rank_function + '_' + global_rank_type, global_is_mono, global_isAscending);
 
     }
     else{
@@ -51,6 +52,15 @@ function init_svg(){
     
 }
 
+function hideDDM2_extraOptions(){
+    d3.selectAll('.compare_metric')
+        .style('display','none');
+}
+
+function showDDM2_extraOptions(){
+    d3.selectAll('.compare_metric')
+        .style('display','');
+}
 
 function makeDDM(){
 
@@ -72,6 +82,7 @@ function makeDDM(){
         // using the data, add the column names and their corresponding titles
         options.text(function(d) {return d.fe_title;})  //makes the dropdown with this value as options
             .attr("col_name", function(d) {return d.col_name;}) //makes the col_name which needs to be called to fill
+            .attr("show_rc", function(d) {return d.show_ddm2;}) //makes the column type to understand if this has rank change
     
         // add an event when the option is selected
         options.on("click", function() {
@@ -82,10 +93,18 @@ function makeDDM(){
             global_rank_type = 'rank'
             global_is_mono = 1
             document.getElementById('rank-type').selectedIndex = 0;
+            global_isAscending = 0
+
+            if(this.getAttribute('col_name')){
+                showDDM2_extraOptions();
+            }
+            else{
+                hideDDM2_extraOptions();
+            }
 
             // call the filling function for current selected attributes anf their color scheme
             reset_svg_fill();
-            fill_csv(svg, global_rank_function + '_' + global_rank_type, global_is_mono);
+            fill_csv(svg, global_rank_function + '_' + global_rank_type, global_is_mono, global_isAscending);
           })
 
         options = d3.select('#rank-type')
@@ -94,10 +113,11 @@ function makeDDM(){
                 // update the selected rank function detail type in global
                 global_rank_type = this.getAttribute('col_name')
                 global_is_mono = this.getAttribute('color_scheme')
+                global_isAscending = this.getAttribute('ascend_order')
 
                 // call the filling function for current selected attributes anf their color scheme
                 reset_svg_fill();
-                fill_csv(svg, global_rank_function + '_' + global_rank_type, global_is_mono);
+                fill_csv(svg, global_rank_function + '_' + global_rank_type, global_is_mono, global_isAscending);
             })
     
     });
@@ -110,3 +130,4 @@ init_svg();
 global_rank_function = 'Ladder score'
 global_rank_type = 'rank'
 global_is_mono = 1
+global_isAscending = 0

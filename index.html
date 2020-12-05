@@ -22,10 +22,10 @@
 
                 <label for="rank-type">Type:</label>
                 <select id="rank-type">
-                    <option col_name='rank' color_scheme=1>Rank</option>
-                    <option col_name='score' color_scheme=1>Score</option>
-                    <option col_name='rc' color_scheme=0 class='compare_metric'>Rank Change</option>
-                    <option col_name='arc' color_scheme=1 class='compare_metric'>Absolute Rank Change</option>
+                    <option col_name='rank' color_scheme=1 ascend_order=0>Rank</option>
+                    <option col_name='score' color_scheme=1 ascend_order=1>Score</option>
+                    <option col_name='rc' color_scheme=0 ascend_order=1 class='compare_metric'>Rank Change</option>
+                    <option col_name='arc' color_scheme=1 ascend_order=1 class='compare_metric'>Absolute Rank Change</option>
                 </select> 
 
             </div>
@@ -50,6 +50,7 @@
                     <li>The second dropdown helps to select specific deatils about the scoring function.</li>
                     <li>Hover over the countries below to get detailed information.</li>
                     <li>Data for greyed out countries is not available.</li>
+                    <li>Countries could be greyed out, as their data does not exist in WHR.</li>
                 </ul> 
             </div>
         </div>
