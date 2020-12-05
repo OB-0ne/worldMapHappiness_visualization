@@ -1,7 +1,7 @@
 body{
     background-color: black;
     font-size: 18;
-    font-family: Monaco, sans-serif
+    font-family: Karla, sans-serif
 }
 
 #header{
@@ -38,7 +38,7 @@ body{
 
 .tooltip {
     display: none;
-    background-color: black;
+    background-color: 424242;
     color: #fff;
     text-align: center;
     border-radius: 6px;
@@ -47,7 +47,7 @@ body{
     padding: 8px 20px;
     margin: auto;
     width: max-content;
-    border: grey solid 3px;
+    border: grey solid 2px;
     font-size: 16;
 }
 
