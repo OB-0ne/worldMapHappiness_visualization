@@ -85,9 +85,9 @@ function makeDDM(){
             .attr("show_rc", function(d) {return d.show_ddm2;}) //makes the column type to understand if this has rank change
     
         // add an event when the option is selected
-        options.on("click", function() {
+        $( "#rank-attribute" ).change(function() {
             // update the selected rank function in global
-            global_rank_function = this.getAttribute('col_name')
+            global_rank_function = $(this).children(":selected").attr("col_name")
 
             // reset the second ddm
             global_rank_type = 'rank'
@@ -95,7 +95,7 @@ function makeDDM(){
             document.getElementById('rank-type').selectedIndex = 0;
             global_isAscending = 0
 
-            if(this.getAttribute('col_name')){
+            if(global_rank_function){
                 showDDM2_extraOptions();
             }
             else{
@@ -107,13 +107,14 @@ function makeDDM(){
             fill_csv(svg, global_rank_function + '_' + global_rank_type, global_is_mono, global_isAscending);
           })
 
-        options = d3.select('#rank-type')
-            .selectAll('option')
-            .on("click", function() {
+        // options = d3.select('#rank-type')
+        //     .selectAll('option')
+            
+        $( "#rank-type" ).change(function() {
                 // update the selected rank function detail type in global
-                global_rank_type = this.getAttribute('col_name')
-                global_is_mono = this.getAttribute('color_scheme')
-                global_isAscending = this.getAttribute('ascend_order')
+                global_rank_type = $(this).children(":selected").attr('col_name')
+                global_is_mono = $(this).children(":selected").attr('color_scheme')
+                global_isAscending = $(this).children(":selected").attr('ascend_order')
 
                 // call the filling function for current selected attributes anf their color scheme
                 reset_svg_fill();
