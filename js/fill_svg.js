@@ -52,9 +52,16 @@ function make_legend(colormap, data_range, is_mono_colorMap){
         .attr("transform", "translate(0,10)");
 
     // set the scale and parameters for the legend bar
-    var y = d3.scaleLinear()
+    if (is_mono_colorMap==0){
+        var y = d3.scaleLinear()
+        .range([300, 0])
+        .domain(data_range);
+    }
+    else{
+        var y = d3.scaleLinear()
         .range([0, 300])
         .domain(data_range);
+    }    
   
     // add ticks on the the legend bar
     var yAxis = d3.axisBottom()

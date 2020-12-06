@@ -18,17 +18,17 @@ function show_tooltip(){
         'arc': 'Rank Change (Absolute)'
     }
 
-    d3.select('#tooltip').style('display', 'block').transition().duration(750);
+    d3.select('#tooltip').transition().style('display', 'block');
     d3.select('#tt_country').text(d3.select(this).attr('data-name'));
-    d3.select('#tt_value').text(type2field[global_rank_type] + ": " + (d3.select(this).attr('curr_val')==null ? 'Not Available' : d3.select(this).attr('curr_val') ));
+    d3.select('#tt_value').text(type2field[global_rank_type] + ": " + (d3.select(this).attr('curr_val')==null ? 'Not Available' : d3.select(this).attr('curr_val')));
     d3.select('#tt_flag').attr('src','https://flagcdn.com/40x30/' + d3.select(this).attr('id').toLowerCase() + '.png');
 
     if(global_rank_type=='rc'){
         if(d3.select(this).attr('curr_val')<0){
-            d3.select('#tt_value').text(type2field[global_rank_type] + ": Improved " + Math.abs(d3.select(this).attr('curr_val')) + ' place(s)');
+            d3.select('#tt_value').text(type2field[global_rank_type] + ": Improved " + Math.abs(d3.select(this).attr('curr_val')).toFixed(0) + ' place(s)');
         }
         else if(d3.select(this).attr('curr_val')>0){
-            d3.select('#tt_value').text(type2field[global_rank_type] + ": Down " + Math.abs(d3.select(this).attr('curr_val')) + ' place(s)');
+            d3.select('#tt_value').text(type2field[global_rank_type] + ": Down " + Math.abs(d3.select(this).attr('curr_val')).toFixed(0) + ' place(s)');
         }
         else if(d3.select(this).attr('curr_val')==0){
             d3.select('#tt_value').text(type2field[global_rank_type] + ": No Change");
@@ -38,7 +38,7 @@ function show_tooltip(){
 }
 
 function hide_tooltip(){
-    d3.select('#tooltip').style('display', 'none').transition().duration(750);
+    d3.select('#tooltip').transition().style('display', 'none');
 }
 
 function hover_tooltip_info(){
@@ -53,11 +53,11 @@ function hover_tooltip_info(){
 }
 
 function show_tooltip_info(){
-    d3.select('#tooltip-info').style('display', 'block').transition().duration(750);
+    d3.select('#tooltip-info').transition().style('display', 'block');
 }
 
 function hide_tooltip_info(){
-    d3.select('#tooltip-info').style('display', 'none').transition().duration(750);
+    d3.select('#tooltip-info').transition().style('display', 'none');
 }
 
 function add_tooltip_event_countries(){

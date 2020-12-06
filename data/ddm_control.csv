@@ -3,7 +3,11 @@ WHR,Ladder score,FALSE
 Baseline Function,baseline,TRUE
 Baseline Correlated,baseline_correlated,TRUE
 Baseline Weighted,baseline_weighted,TRUE
-Custom Grouped,gCustom_weighted,TRUE
-WHO Grouped,gWHO_weighted,TRUE
-World Bank Grouped,gWB_weighted,TRUE
-Angus Maddison grouped,gMadd_weighted,TRUE
+Group - Custom,gCustom,TRUE
+Country - Custom Group,gCustom_weighted,TRUE
+Group - WHO,gWHO,TRUE
+Country - WHO Group,gWHO_weighted,TRUE
+Group - World Bank,gWB,TRUE
+Country - World Bank Group,gWB_weighted,TRUE
+Group - Angus Maddison,gMadd,TRUE
+Country - Angus Maddison Group,gMadd_weighted,TRUE
