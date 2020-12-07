@@ -1,7 +1,6 @@
 fe_title,col_name,show_ddm2
 WHR,Ladder score,FALSE
 Baseline Function,baseline,TRUE
-Baseline Correlated,baseline_correlated,TRUE
 Baseline Weighted,baseline_weighted,TRUE
 Group - Custom,gCustom,TRUE
 Country - Custom Group,gCustom_weighted,TRUE
